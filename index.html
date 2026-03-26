@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="TechBridge Initiative by Beeman Computers — Affordable laptop installment plans for schools, NGOs, and training programs in Nigeria. Eliminating the digital divide, one device at a time." />
+  <title>TechBridge Initiative</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Ionicons for icons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+  <!-- =============================================
+       NAVIGATION
+       ============================================= -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <!-- Logo -->
+      <a href="#home" class="nav__logo" aria-label="TechBridge Home">
+        <div class="nav__logo-mark">TB</div>
+        <div class="nav__logo-text">
+          <strong>Tech<span>Bridge</span></strong>
+          <small
+            style="display:block; font-size:1.2rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#94a3b8; line-height:1;">Initiative
+          </small>
+        </div>
+      </a>
+
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav__links" aria-label="Main navigation">
+        <a href="#about" class="nav__link">About</a>
+        <a href="#offer" class="nav__link">Our Offer</a>
+        <a href="#process" class="nav__link">How It Works</a>
+        <!-- Dropdown -->
+        <div class="nav__dropdown" role="navigation" aria-label="Solutions submenu">
+          <span class="nav__link nav__dropdown-toggle" tabindex="0">
+            Solutions <ion-icon name="chevron-down-outline" class="chevron"></ion-icon>
+          </span>
+          <div class="nav__dropdown-menu" role="menu">
+            <a href="#schools" class="nav__dropdown-item" role="menuitem">
+              <ion-icon name="school-outline" class="icon"></ion-icon>
+              For Schools
+            </a>
+            <a href="#ngos" class="nav__dropdown-item" role="menuitem">
+              <ion-icon name="people-outline" class="icon"></ion-icon>
+              For NGOs &amp; Programs
+            </a>
+          </div>
+        </div>
+        <a href="#contact" class="nav__link">Contact</a>
+      </nav>
+
+      <!-- CTA -->
+      <a href="#contact" class="btn btn--primary nav__cta" style="padding: 1rem 2rem; font-size: 1.5rem;">
+        Request a Proposal
+      </a>
+
+      <!-- Hamburger -->
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#about">About</a>
+      <a href="#offer">Our Offer</a>
+      <a href="#process">How It Works</a>
+      <a href="#schools">For Schools</a>
+      <a href="#ngos">For NGOs &amp; Programs</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn--primary">Request a Proposal</a>
+    </div>
+  </header>
+
+
+  <!-- =============================================
+       HERO SECTION
+       ============================================= -->
+  <section class="hero" id="home">
+    <div class="hero__inner">
+      <!-- Left: Copy -->
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Now Available Across Nigeria
+        </div>
+
+        <h1 class="hero__heading">
+          TechBridge: <span>Bridging the Digital Divide</span>
+        </h1>
+
+        <p class="hero__subheading">
+          Beeman Computers provides schools, NGOs, and training programs with premium laptops through affordable
+          installment plans — eliminating large upfront costs and making technology accessible to all.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--primary" id="hero-cta-primary">
+            Request a Proposal
+          </a>
+          <a href="#offer" class="btn btn--outline" id="hero-cta-secondary">
+            Learn More
+            <ion-icon name="arrow-down-outline"></ion-icon>
+          </a>
+        </div>
+
+        <div class="hero__proof">
+          <div class="hero__proof-avatars">
+            <div class="hero__proof-avatar">S</div>
+            <div class="hero__proof-avatar">N</div>
+            <div class="hero__proof-avatar">T</div>
+            <div class="hero__proof-avatar" style="background: linear-gradient(135deg, #eb984e, #e67e22);">+</div>
+          </div>
+          <p class="hero__proof-text">
+            Trusted by <strong>schools, NGOs &amp; training programs</strong> across Nigeria
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: Visual -->
+      <div class="hero__visual">
+        <div class="hero__image-wrapper">
+          <img src="new2.png" alt="TechBridge Community and Learning" class="hero__image" />
+        </div>
+
+        <!-- Floating Stat Cards
+        <div class="hero__stat-card hero__stat-card--top">
+          <div class="hero__stat-icon">💻</div>
+          <div>
+            <div class="hero__stat-value">6–18 mo.</div>
+            <div class="hero__stat-label">Flexible Plans</div>
+          </div>
+        </div>
+
+        <div class="hero__stat-card hero__stat-card--bottom">
+          <div class="hero__stat-icon">✅</div>
+          <div>
+            <div class="hero__stat-value">Ready to Use</div>
+            <div class="hero__stat-label">Pre-loaded software</div>
+          </div>
+        </div>
+      </div> -->
+      </div>
+  </section>
+
+
+  <!-- =============================================
+       ABOUT SECTION
+       ============================================= -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <!-- Left: Content -->
+        <div class="about__content fade-in-left">
+          <span class="section-label">Who We Are</span>
+          <h2 class="heading-secondary">Eliminating Technology Barriers</h2>
+          <p style="font-size:1.8rem; color:#64748b; line-height:1.7; margin-bottom:1.6rem;">
+            Beeman Computers is on a mission to eliminate technology barriers in education and community development. We
+            believe that access to quality technology should not depend on the size of your budget.
+          </p>
+
+          <div class="about__pillars">
+            <div class="about__pillar">
+              <div class="about__pillar-icon">🌍</div>
+              <div class="about__pillar-text">
+                <h4>Access to Technology for All</h4>
+                <p>We break down financial barriers so every school and organisation can go digital.</p>
+              </div>
+            </div>
+            <div class="about__pillar">
+              <div class="about__pillar-icon">♻️</div>
+              <div class="about__pillar-text">
+                <h4>Sustainable Digital Transformation</h4>
+                <p>Our plans are designed to grow with you — sustainable, scalable, and always supported.</p>
+              </div>
+            </div>
+            <div class="about__pillar">
+              <div class="about__pillar-icon">🤝</div>
+              <div class="about__pillar-text">
+                <h4>Partnerships That Make Real Impact</h4>
+                <p>We don't just supply devices — we walk the journey with you as a committed partner.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Visual -->
+        <div class="about__visual fade-in-right">
+          <div class="about__img-wrap">
+            <img src="hero.png" alt="Beeman Computers team working with clients" />
+          </div>
+          <div class="about__quote-card">
+            <p>You don't need a huge budget to go digital. You just need a partner who understands your goals.</p>
+            <div class="about__quote-author">— Beeman Computers</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       WHAT WE OFFER SECTION
+       ============================================= -->
+  <section class="section section--alt" id="offer">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What We Offer</span>
+        <h2 class="heading-secondary">Everything You Need to Go Digital</h2>
+        <p class="section-description center">
+          Our TechBridge program is built end-to-end — from flexible financing to ongoing technical support — so your
+          institution can focus on what matters most.
+        </p>
+      </div>
+
+      <div class="offer__grid">
+        <div class="offer__card fade-in">
+          <div class="offer__icon">📅</div>
+          <h3 class="offer__card-title">Flexible Payment Plans</h3>
+          <p class="offer__card-text">Access premium laptops on affordable installment plans spread over 6, 12, or 18
+            months with no hidden charges.</p>
+        </div>
+
+        <div class="offer__card fade-in">
+          <div class="offer__icon">🚀</div>
+          <h3 class="offer__card-title">Ready to Use Devices</h3>
+          <p class="offer__card-text">All devices come pre-loaded with the necessary software your institution needs.
+            Unbox and get started immediately.</p>
+        </div>
+
+        <div class="offer__card fade-in">
+          <div class="offer__icon">🎓</div>
+          <h3 class="offer__card-title">Training &amp; Support</h3>
+          <p class="offer__card-text">Comprehensive onboarding training for all users and ongoing technical support
+            throughout the duration of your plan.</p>
+        </div>
+
+        <div class="offer__card fade-in">
+          <div class="offer__icon">🎯</div>
+          <h3 class="offer__card-title">Tailored Packages</h3>
+          <p class="offer__card-text">No two institutions are alike. We create customised solutions designed
+            specifically for each organisation's unique needs and goals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       HOW IT WORKS SECTION
+       ============================================= -->
+  <section class="section" id="process">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">The Process</span>
+        <h2 class="heading-secondary">How TechBridge Works</h2>
+        <p class="section-description center">
+          Getting started is simple. From your first request to ongoing support, we make the journey seamless.
+        </p>
+      </div>
+
+      <div class="process__steps">
+
+        <!-- Step 1 -->
+        <div class="process__step">
+          <div class="process__step-content fade-in-left">
+            <div class="process__step-number">01</div>
+            <div class="process__step-badge">Step 1</div>
+            <h3 class="process__step-title">Make Your Request</h3>
+            <p class="process__step-desc">
+              Fill out our simple request form online or give us a call. Tell us your institution's name, size, and
+              technology needs. No commitment required at this stage — just a conversation.
+            </p>
+          </div>
+          <div class="process__step-visual fade-in-right">
+            <div class="process__step-icon-wrap">📝</div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process__step">
+          <div class="process__step-content fade-in-right">
+            <div class="process__step-number">02</div>
+            <div class="process__step-badge">Step 2</div>
+            <h3 class="process__step-title">Needs Assessment &amp; Proposal</h3>
+            <p class="process__step-desc">
+              Our team conducts a thorough needs assessment for your institution. We then prepare a detailed proposal —
+              including recommended devices, payment plan options, and total cost breakdown.
+            </p>
+          </div>
+          <div class="process__step-visual fade-in-left">
+            <div class="process__step-icon-wrap">📊</div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process__step">
+          <div class="process__step-content fade-in-left">
+            <div class="process__step-number">03</div>
+            <div class="process__step-badge">Step 3</div>
+            <h3 class="process__step-title">Sign Agreement &amp; First Payment</h3>
+            <p class="process__step-desc">
+              Once you're satisfied with the proposal, we sign a formal agreement and you make your first instalment
+              payment. This kicks off your TechBridge journey.
+            </p>
+          </div>
+          <div class="process__step-visual fade-in-right">
+            <div class="process__step-icon-wrap">✍️</div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process__step">
+          <div class="process__step-content fade-in-right">
+            <div class="process__step-number">04</div>
+            <div class="process__step-badge">Step 4</div>
+            <h3 class="process__step-title">Delivery &amp; Training Begins</h3>
+            <p class="process__step-desc">
+              Your pre-configured laptops are delivered to your location. Our team conducts hands-on training for
+              teachers, staff, or beneficiaries to ensure everyone hits the ground running.
+            </p>
+          </div>
+          <div class="process__step-visual fade-in-left">
+            <div class="process__step-icon-wrap">🚚</div>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="process__step">
+          <div class="process__step-content fade-in-left">
+            <div class="process__step-number">05</div>
+            <div class="process__step-badge">Step 5</div>
+            <h3 class="process__step-title">Monthly Payments &amp; Ongoing Support</h3>
+            <p class="process__step-desc">
+              Enjoy predictable monthly payments while our support team stays available for technical assistance. We
+              remain your partner from day one through the completion of your plan.
+            </p>
+          </div>
+          <div class="process__step-visual fade-in-right">
+            <div class="process__step-icon-wrap">🛡️</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       FOR SCHOOLS SECTION
+       ============================================= -->
+  <section class="section section--alt" id="schools">
+    <div class="container">
+      <div class="solution__grid">
+        <!-- Left: Visual -->
+        <div class="solution__visual fade-in-left">
+          <div class="solution__image-wrap">
+            <img src="school.png" alt="Students using laptops in a modern school lab" />
+            <div class="solution__badge">🏫 For Schools</div>
+          </div>
+        </div>
+
+        <!-- Right: Content -->
+        <div class="solution__content fade-in-right">
+          <span class="section-label">Schools</span>
+          <h2 class="heading-secondary">Empowering Students &amp; Teachers</h2>
+          <p style="font-size:1.7rem; color:#64748b; line-height:1.7; margin-bottom:0.8rem;">
+            From setting up full computer labs to equipping every student with a personal device, TechBridge has the
+            right plan for every school at any scale.
+          </p>
+
+          <ul class="solution__features">
+            <li class="solution__feature">Computer labs &amp; 1:1 student device programs</li>
+            <li class="solution__feature">Teacher laptop initiatives &amp; professional development</li>
+            <li class="solution__feature">IT infrastructure setup &amp; management</li>
+            <li class="solution__feature">Pre-loaded educational software</li>
+            <li class="solution__feature">Ongoing technical support &amp; warranty coverage</li>
+            <li class="solution__feature">Budget-friendly 6, 12, or 18-month plans</li>
+          </ul>
+
+          <a href="#contact" class="btn btn--primary" id="school-cta">
+            <ion-icon name="school-outline"></ion-icon>
+            Get School Proposal
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       FOR NGOs & PROGRAMS SECTION
+       ============================================= -->
+  <section class="section" id="ngos">
+    <div class="container">
+      <div class="solution__grid solution__grid--reverse">
+        <!-- Left: Content -->
+        <div class="solution__content fade-in-left">
+          <span class="section-label">NGOs &amp; Programs</span>
+          <h2 class="heading-secondary">Powering Community Impact</h2>
+          <p style="font-size:1.7rem; color:#64748b; line-height:1.7; margin-bottom:0.8rem;">
+            We understand that NGOs and community programs operate under tight budgets. TechBridge helps you maximise
+            impact without compromising on the quality of technology.
+          </p>
+
+          <ul class="solution__features">
+            <li class="solution__feature">Staff technology &amp; digital workflows</li>
+            <li class="solution__feature">Community training centres &amp; digital hubs</li>
+            <li class="solution__feature">Skills development &amp; vocational programs</li>
+            <li class="solution__feature">Field operations technology &amp; data collection</li>
+            <li class="solution__feature">Donor-friendly payment documentation</li>
+            <li class="solution__feature">Flexible plans aligned to grant cycles</li>
+          </ul>
+
+          <a href="#contact" class="btn btn--primary" id="ngo-cta">
+            <ion-icon name="people-outline"></ion-icon>
+            Get NGO Proposal
+          </a>
+        </div>
+
+        <!-- Right: Visual -->
+        <div class="solution__visual fade-in-right">
+          <div class="solution__image-wrap">
+            <img src="ngo.png" alt="NGO community members learning digital skills" />
+            <div class="solution__badge">🤝 For NGOs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       CTA BANNER / QUOTE
+       ============================================= -->
+  <div class="cta-banner">
+    <div class="cta-banner__inner">
+      <p class="cta-banner__quote">
+        You don't need a huge budget to go digital. You just need a partner who understands your goals.
+      </p>
+      <p class="cta-banner__sub">Join institutions across Nigeria making the leap to digital with TechBridge.</p>
+      <div class="cta-banner__actions">
+        <a href="#contact" class="btn btn--white">
+          <ion-icon name="document-text-outline"></ion-icon>
+          Request a Proposal
+        </a>
+        <a href="tel:+2348137072118" class="btn btn--ghost">
+          <ion-icon name="call-outline"></ion-icon>
+          Call Us Now
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =============================================
+       CONTACT SECTION
+       ============================================= -->
+  <section class="section section--blue" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Get in Touch</span>
+        <h2 class="heading-secondary">Request a Proposal Today</h2>
+        <p class="section-description center">
+          Tell us about your institution and we'll put together a customised TechBridge plan within 48 hours —
+          absolutely free.
+        </p>
+      </div>
+
+      <div class="contact__grid">
+        <!-- Form -->
+        <div class="contact__form-wrap fade-in-left">
+          <h3 style="font-size:2rem; font-weight:700; color:#0f172a; margin-bottom:2.4rem;">Send Us a Message</h3>
+          <form action="https://api.web3forms.com/submit" method="POST" class="contact__form" id="contactForm">
+            <!-- Web3Forms Configuration -->
+            <input type="hidden" name="access_key" value="45488984-f558-4fae-8913-7bb1a142f3e0" />
+            <input type="hidden" name="from_name" value="TechBridge Web Lead" />
+            <input type="hidden" name="subject" value="New Message from TechBridge Website" />
+            <!-- Anti-Spam: Honeypot -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" placeholder="e.g. John Adamu" required />
+              </div>
+              <div class="form-group">
+                <label for="organization">Organisation *</label>
+                <input type="text" id="organization" name="organization" placeholder="e.g. Bright Future Academy"
+                  required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone / WhatsApp</label>
+                <input type="tel" id="phone" name="phone" placeholder="+234 800 000 0000" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="institutionType">Institution Type</label>
+              <select id="institutionType" name="institutionType">
+                <option value="" disabled selected>Select your institution type</option>
+                <option value="school">School / Education Institution</option>
+                <option value="ngo">NGO / Non-profit</option>
+                <option value="training">Training / Skills Program</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message *</label>
+              <textarea id="message" name="message"
+                placeholder="Tell us about your needs — number of devices, preferred plan duration, specific software requirements, etc."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary form-submit" id="submitBtn">
+              <ion-icon name="send-outline"></ion-icon>
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact__info fade-in-right">
+          <h3 style="font-size:2rem; font-weight:700; color:#0f172a; margin-bottom:0.8rem;">Contact Details</h3>
+          <p style="font-size:1.5rem; color:#64748b; margin-bottom:2.4rem;">Prefer to reach us directly? We're available
+            via phone, WhatsApp, or email.</p>
+
+          <div class="contact__info-card">
+            <div class="contact__info-icon">📞</div>
+            <div>
+              <div class="contact__info-label">Phone &amp; WhatsApp</div>
+              <div class="contact__info-value">
+                <a href="tel:+2348137072118">+234 813 707 2118</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact__info-card">
+            <div class="contact__info-icon">✉️</div>
+            <div>
+              <div class="contact__info-label">Email Address</div>
+              <div class="contact__info-value">
+                <a href="mailto:Beemancomputers@gmail.com">Beemancomputers@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact__info-card">
+            <div class="contact__info-icon">📍</div>
+            <div>
+              <div class="contact__info-label">Office Address</div>
+              <div class="contact__info-value">Shop FC 23 Old Banex Plaza,<br />Wuse II, FCT, Abuja.</div>
+            </div>
+          </div>
+
+          <div class="contact__info-card">
+            <div class="contact__info-icon">🕐</div>
+            <div>
+              <div class="contact__info-label">Business Hours</div>
+              <div class="contact__info-value">Mon – Fri: 9am – 6pm<br />Sat: 10am – 4pm</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       FOOTER
+       ============================================= -->
+  <footer class="footer" id="footer">
+    <div class="footer__inner">
+      <div class="footer__grid">
+        <!-- Brand Column -->
+        <div class="footer__brand">
+          <a href="#home" class="nav__logo footer__logo" aria-label="TechBridge Home">
+            <div class="nav__logo-mark">TB</div>
+            <div class="nav__logo-text">
+              <strong>Tech<span>Bridge</span></strong>
+              <small
+                style="display:block; font-size:1.2rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; line-height:1;">Initiative
+              </small>
+            </div>
+          </a>
+          <p class="footer__brand-desc">
+            An initiative by Beeman Computers, providing institutions across Nigeria with affordable access to premium
+            technology through flexible installment plans.
+          </p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link" aria-label="Facebook">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+            <a href="https://wa.me/2348137072118" class="footer__social-link" aria-label="WhatsApp">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer__col">
+          <h4 class="footer__col-title">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#offer">Our Offer</a></li>
+            <li><a href="#process">How It Works</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Solutions -->
+        <div class="footer__col">
+          <h4 class="footer__col-title">Solutions</h4>
+          <ul class="footer__links">
+            <li><a href="#schools">For Schools</a></li>
+            <li><a href="#ngos">For NGOs</a></li>
+            <li><a href="#ngos">For Training Programs</a></li>
+            <li><a href="#contact">Custom Packages</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer__col">
+          <h4 class="footer__col-title">Contact</h4>
+          <div class="footer__contact-item">
+            <ion-icon name="call-outline" class="icon"></ion-icon>
+            <a href="tel:+2348137072118">+234 813 707 2118</a>
+          </div>
+          <div class="footer__contact-item">
+            <ion-icon name="mail-outline" class="icon"></ion-icon>
+            <a href="mailto:Beemancomputers@gmail.com">Beemancomputers@gmail.com</a>
+          </div>
+          <div class="footer__contact-item">
+            <ion-icon name="location-outline" class="icon"></ion-icon>
+            <span>Shop FC 23 Old Banex Plaza, Wuse II, FCT, Abuja.</span>
+          </div>
+        </div>
+      </div>
+
+      <hr class="footer__divider" />
+
+      <div class="footer__bottom">
+        <p>&copy; 2025 Beeman Computers. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
