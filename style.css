@@ -436,6 +436,12 @@ img {
   margin-top: 1.6rem;
   width: 100%;
   justify-content: center;
+  color: var(--primary-light);
+  padding: 10px;
+}
+
+.nav__mobile .btn:hover {
+  color: var(--primary-mid);
 }
 
 /* =============================================
@@ -722,7 +728,7 @@ img {
   border-radius: 16px;
   padding: 2.4rem;
   max-width: 32rem;
-  box-shadow: 0 12px 40px rgba(37, 99, 235, 0.35);
+  /* box-shadow: 0 12px 40px rgba(37, 99, 235, 0.35); */
 }
 
 .about__quote-card p {
@@ -1318,6 +1324,81 @@ img {
 }
 
 /* =============================================
+   PROJECTS SECTION
+   ============================================= */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.2rem;
+  margin-top: 2rem;
+}
+
+.project__card {
+  position: relative;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 4/3;
+  cursor: pointer;
+}
+
+.project__card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0.8;
+  transition: var(--transition);
+  z-index: 1;
+}
+
+.project__card:hover::after {
+  opacity: 0.95;
+  /* background: linear-gradient(to top, rgba(230, 126, 34, 0.9) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0) 100%); */
+}
+
+.project__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.project__card:hover .project__img {
+  transform: scale(1.08);
+}
+
+.project__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3.2rem;
+  z-index: 2;
+  transform: translateY(1.5rem);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0.9;
+}
+
+.project__card:hover .project__content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.project__title {
+  color: #fff;
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+}
+
+.project__desc {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.6rem;
+}
+
+/* =============================================
    ANIMATIONS
    ============================================= */
 .fade-in {
@@ -1395,7 +1476,8 @@ img {
 
   .about__grid,
   .solution__grid,
-  .contact__grid {
+  .contact__grid,
+  .projects__grid {
     grid-template-columns: 1fr;
     gap: 4.8rem;
   }
