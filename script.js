@@ -149,3 +149,65 @@ if (contactForm) {
     }
   });
 }
+
+// =============================================
+// PROJECT SLIDER
+// =============================================
+const projectTrack = document.getElementById('projects-track');
+const projectPrev = document.getElementById('projects-prev');
+const projectNext = document.getElementById('projects-next');
+const projectIndicators = document.getElementById('projects-indicators');
+
+if (projectTrack && projectPrev && projectNext && projectIndicators) {
+  const slides = Array.from(projectTrack.children);
+  let currentIndex = 0;
+
+  // Create indicators
+  slides.forEach((_, index) => {
+    const dot = document.createElement('button');
+    dot.classList.add('slider-dot');
+    dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+    if (index === 0) dot.classList.add('active');
+
+    dot.addEventListener('click', () => {
+      goToSlide(index);
+    });
+
+    projectIndicators.appendChild(dot);
+  });
+
+  const dots = Array.from(projectIndicators.children);
+
+  function updateSlider() {
+    // Move track
+    projectTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    // Update dots
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentIndex].classList.add('active');
+
+    // Update buttons state
+    projectPrev.disabled = currentIndex === 0;
+    projectNext.disabled = currentIndex === slides.length - 1;
+  }
+
+  function goToSlide(index) {
+    currentIndex = index;
+    updateSlider();
+  }
+
+  projectPrev.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      goToSlide(currentIndex - 1);
+    }
+  });
+
+  projectNext.addEventListener('click', () => {
+    if (currentIndex < slides.length - 1) {
+      goToSlide(currentIndex + 1);
+    }
+  });
+
+  // Init
+  updateSlider();
+}
