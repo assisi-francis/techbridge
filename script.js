@@ -10,7 +10,7 @@ const nav = document.querySelector('.nav');
 // =============================================
 const hamburger = document.querySelector('.nav__hamburger');
 const mobileMenu = document.querySelector('.nav__mobile');
-const dropdownToggle = document.querySelector('.nav__dropdown');
+
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('open');
@@ -25,27 +25,7 @@ mobileMenu.querySelectorAll('a').forEach(link => {
   });
 });
 
-// =============================================
-// DESKTOP DROPDOWN (keyboard accessible)
-// =============================================
-if (dropdownToggle) {
-  dropdownToggle.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      dropdownToggle.classList.toggle('open');
-    }
-    if (e.key === 'Escape') {
-      dropdownToggle.classList.remove('open');
-    }
-  });
 
-  // Close dropdown when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!dropdownToggle.contains(e.target)) {
-      dropdownToggle.classList.remove('open');
-    }
-  });
-}
 
 // =============================================
 // SCROLL ANIMATIONS (Intersection Observer)
@@ -211,3 +191,66 @@ if (projectTrack && projectPrev && projectNext && projectIndicators) {
   // Init
   updateSlider();
 }
+
+// =============================================
+// ANIMATED STATS COUNTER
+// =============================================
+const animateCounter = (el, target, duration = 2000) => {
+  let startTimestamp = null;
+  const startValue = 0;
+  
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    
+    // Ease out cubic function for smooth deceleration
+    const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+    const currentValue = Math.floor(easeOutCubic * (target - startValue) + startValue);
+    
+    // Formatting with specific suffixes
+    if (target === 98) {
+      el.textContent = `${currentValue}%`;
+    } else if (target >= 10 && target !== 98) {
+      el.textContent = `${currentValue}+`;
+    } else {
+      el.textContent = currentValue;
+    }
+
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    } else {
+      // Ensure final values are exact
+      if (target === 98) {
+        el.textContent = '98%';
+      } else if (target >= 10) {
+        el.textContent = `${target}+`;
+      } else {
+        el.textContent = target;
+      }
+    }
+  };
+  
+  window.requestAnimationFrame(step);
+};
+
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const numbers = entry.target.querySelectorAll('.stat__number');
+      numbers.forEach(num => {
+        const target = parseInt(num.getAttribute('data-target'), 10);
+        animateCounter(num, target);
+      });
+      // Animation should only run once
+      statsObserver.unobserve(entry.target);
+    }
+  });
+}, { 
+  threshold: 0.3 // Trigger when 30% of the section is visible
+});
+
+const statsStrip = document.querySelector('.stats-strip');
+if (statsStrip) {
+  statsObserver.observe(statsStrip);
+}
+
