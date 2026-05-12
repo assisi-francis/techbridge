@@ -6,6 +6,25 @@ const nav = document.querySelector('.nav');
 /* No longer changing nav appearance on scroll as per user request */
 
 // =============================================
+// FAQ ACCORDION
+// =============================================
+const faqItems = document.querySelectorAll('.faq__item');
+
+if (faqItems.length > 0) {
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq__question');
+    question.addEventListener('click', () => {
+      // Optional: Close other items when one is opened
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) otherItem.classList.remove('active');
+      });
+
+      item.classList.toggle('active');
+    });
+  });
+}
+
+// =============================================
 // MOBILE HAMBURGER MENU
 // =============================================
 const hamburger = document.querySelector('.nav__hamburger');
@@ -198,15 +217,15 @@ if (projectTrack && projectPrev && projectNext && projectIndicators) {
 const animateCounter = (el, target, duration = 2000) => {
   let startTimestamp = null;
   const startValue = 0;
-  
+
   const step = (timestamp) => {
     if (!startTimestamp) startTimestamp = timestamp;
     const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-    
+
     // Ease out cubic function for smooth deceleration
     const easeOutCubic = 1 - Math.pow(1 - progress, 3);
     const currentValue = Math.floor(easeOutCubic * (target - startValue) + startValue);
-    
+
     // Formatting with specific suffixes
     if (target === 98) {
       el.textContent = `${currentValue}%`;
@@ -229,7 +248,7 @@ const animateCounter = (el, target, duration = 2000) => {
       }
     }
   };
-  
+
   window.requestAnimationFrame(step);
 };
 
@@ -245,7 +264,7 @@ const statsObserver = new IntersectionObserver((entries) => {
       statsObserver.unobserve(entry.target);
     }
   });
-}, { 
+}, {
   threshold: 0.3 // Trigger when 30% of the section is visible
 });
 
